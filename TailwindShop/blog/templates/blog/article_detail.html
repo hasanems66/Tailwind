@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/article_page.css" />
+        <script src="./js/article_page.js" defer ></script>
+        
+    </head>
+    <body class="min-h-screen text-gray-600 fill-gray-600 overflow-x-hidden">
+        
+        <!-- navigation -->
+        <nav class="bg-cyan-400">
+            <div
+                class="container mx-auto py-1 flex items-center flex-row-reverse"
+            >
+                <!-- hamberger menu part -->
+                <div
+                    class="hamberger-menu w-[30px] mr-4 cursor-pointer md:hidden"
+                >
+                    <span
+                        class="hamberger-item block w-full bg-gray-600 rounded h-[3px] my-1.5 duration-200"
+                    ></span>
+                    <span
+                        class="hamberger-item block w-full bg-gray-600 rounded h-[3px] my-1.5 duration-200"
+                    ></span>
+                    <span
+                        class="hamberger-item block w-full bg-gray-600 rounded h-[3px] my-1.5 duration-200"
+                    ></span>
+                </div>
+                <!-- logo and brand part -->
+                <div class="grow md:grow-0 md:w-[250px]">
+                    <a
+                        class="flex flex-row-reverse justify-center items-center"
+                        href="#"
+                    >
+                        <img
+                            class="w-[50px] rounded-full"
+                            src="./images/logo.jpg"
+                            alt="logo"
+                        />
+                        <h1 class="text-2xl text-red-500 mr-4">E.M.S</h1>
+                    </a>
+                </div>
+                <!-- navigation links part -->
+                <div
+                    class="absolute top-0 z-[1000] bg-white w-full left-full duration-200 md:relative md:left-0 md:bg-transparent navigation"
+                >
+                    <!-- nav bar close icon -->
+                    <svg
+                        class="absolute right-0 m-4 p-2 w-[40px] h-[40px] bg-red-200 hover:bg-red-300 rounded-full cursor-pointer duration-200 dropdown-closer md:hidden"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                        />
+                    </svg>
+                    <!-- navbar links -->
+                    <ul
+                        class="flex flex-col mt-[80px] md:mt-0 md:justify-center md:items-center md:flex-row-reverse"
+                    >
+                        <li>
+                            <a
+                                class="block text-center hover:bg-gray-100 py-4 px-5 md:hover:bg-transparent md:hover:text-white duration-200"
+                                href="#"
+                                >خانه</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block text-center hover:bg-gray-100 py-4 px-5 md:hover:bg-transparent md:hover:text-white duration-200"
+                                href="#"
+                                >دوره ها</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block text-center hover:bg-gray-100 py-4 px-5 md:hover:bg-transparent md:hover:text-white duration-200"
+                                href="#"
+                                >مقالات</a
+                            >
+                        </li>
+                        <li class="dropdown-container md:relative">
+                            <!-- large screen as a link -->
+                            <a
+                                class="hidden md:block text-center hover:bg-gray-100 py-4 px-5 cursor-pointer md:hover:bg-transparent md:hover:text-white dropdown-tab"
+                                href="#"
+                            >
+                                <svg
+                                    class="inline duration-200 md:rotate-0 arrow-icon"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                                    />
+                                </svg>
+                                <span class="duration-200"> فروشگاه </span>
+                            </a>
+
+                            <!-- small screen as normal element -->
+                            <div
+                                class="block md:hidden text-center hover:bg-gray-100 py-4 px-5 cursor-pointer md:hover:bg-transparent md:hover:text-white dropdown-tab"
+                            >
+                                <svg
+                                    class="inline duration-200 md:rotate-0 arrow-icon"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                                    />
+                                </svg>
+                                <span class="duration-200"> فروشگاه </span>
+                            </div>
+                            <div
+                                class="h-0 bg-gray-200 overflow-hidden duration-200 dropdown-menu md:absolute md:right-0 md:hidden md:bg-white md:w-[200px] md:h-[256px] md:py-2 md:border md:border-gray-300 md:rounded-lg"
+                            >
+                                <!-- dropdown items -->
+                                <ul class="flex flex-col">
+                                    <li>
+                                        <a
+                                            class="block py-3 hover:bg-gray-100 text-center"
+                                            href="#"
+                                            >پرستاری</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="block py-3 hover:bg-gray-100 text-center"
+                                            href="#"
+                                            >فوریت پزشکی</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="block py-3 hover:bg-gray-100 text-center"
+                                            href="#"
+                                            >اتاق عمل</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="block py-3 hover:bg-gray-100 text-center"
+                                            href="#"
+                                            >هوشبری</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            class="block py-3 hover:bg-gray-100 text-center"
+                                            href="#"
+                                            >مامایی</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a
+                                class="block text-center hover:bg-gray-100 py-4 px-5 duration-200 md:hidden md:hover:bg-transparent md:hover:text-white lg:block"
+                                href="#"
+                                >درباره ما</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="block text-center hover:bg-gray-100 py-4 px-5 duration-200 md:hidden md:hover:bg-transparent md:hover:text-white lg:block"
+                                href="#"
+                                >تماس با ما</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center ml-4">
+                    <!-- loggined profile part -->
+
+                    <div class="relative z-50 avatar-wrapper">
+                        <div class="flex items-center">
+                            <div>
+                                <img
+                                    class="w-[45px] min-w-[45px] h-[45px] rounded-full objecte-cover"
+                                    src="./images/avatar.jpg"
+                                    alt="avatar image"
+                                />
+                            </div>
+
+                            <!-- show full username for large screen -->
+                            <span
+                                class="hidden md:block ml-2 text-sm px-2 w-[150px] max-w-[200px]"
+                                >حسن سجادی</span
+                            >
+                        </div>
+                        <div
+                            class="hidden absolute border bg-white w-[200px] overflow-hidden rounded-lg avatar-option z-[200]"
+                        >
+                            <ul>
+                                <li>
+                                    <!-- show full username for small screen -->
+                                    <span
+                                        class="block md:hidden px-4 py-2 text-right border-b"
+                                        >حسن سجادی</span
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="block hover:bg-gray-100 px-4 py-2 text-right"
+                                        href="#"
+                                        title="ویرایش اطلاعات"
+                                    >
+                                        ویرایش اطلاعات
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="flex flex-row-reverse items-center hover:bg-gray-100 px-4 py-2 text-right"
+                                        href="#"
+                                        title="سبد خرید"
+                                    >
+                                        <span class="grow">سبد خرید</span>
+                                        <span
+                                            class="bg-red-400 text-white text-sm py-1 px-2 rounded-full"
+                                            >2</span
+                                        >
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="block hover:bg-red-100 text-red-400 px-4 py-2 text-right"
+                                        href="#"
+                                        title="خروج"
+                                        >خروج</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- login/register button -->
+                    <!-- for small screen -->
+
+                    <!-- <a class="md:hidden" href="#" title="user login">
+                        <svg class="w-[35px] h-[35px] hover:fill-[#fff] duration-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z"/>
+                            <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                        </svg>
+                    </a> -->
+
+                    <!-- for large screen -->
+
+                    <!-- <a
+                        class="md:block w-[150px] py-3 px-6 border border rounded-full hover:bg-white hover:border-white duration-200 border-gray-600 hidden"
+                        href="#"
+                        title="user login" >
+                        ورود / ثبت نام</a>  -->
+                </div>
+            </div>
+        </nav>
+
+        <!-- main content -->
+        <main>
+            <div
+                class="relative container mx-auto xl:flex xl:flex-row-reverse xl:flex-wrap"
+            >
+                <!-- article section -->
+                <section class="mx-5 xl:w-7/12 xl:order-1">
+                    <div class="my-10 w-full">
+                        <img class="rounded-lg w-full h-[250px] md:h-[350px] lg:h-[450px] object-fill" src="./images/slide_bar_wallpaper.jpg" alt="عکس مقاله" />
+                    </div>
+                    <div class="direction-rtl">
+                        <h2 class="block text-xl mx-2 mt-[40px] mb-[20px]">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                            صنعت چاپ
+                        </h2>
+                        <hr class="mb-4" />
+                        <div class="flex items-center mb-5 select-none">
+                            <div class="flex items-center border-l pr-2 pl-4 text-gray-400">
+                                <span class="w-[34px] h-[34px] rounded-full border object-cover overflow-hidden ml-2">
+                                    <img src="./images/avatar.jpg" alt="عکس کاربر" />
+                                </span>
+                                <span class="text-sm">مسعود رحمانی</span>
+                            </div>
+                            <div class="flex items-center mr-2 border-l pl-4 text-gray-400">
+                                <span class="ml-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                                    </svg>
+                                </span>
+                                <span class="text-sm">15 مهر 1402</span>
+                            </div>
+                            <div class="flex items-center mr-2 text-gray-400">
+                                <span class="ml-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                                    </svg>
+                                </span>
+                                <span>1 دقیقه</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-justify leading-7 px-5">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                            صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها
+                            و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                            لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
+                            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می
+                            باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
+                            آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا
+                            با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای
+                            علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی
+                            ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                            دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به
+                            پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                            اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+                            اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن ساختگی
+                            با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                            طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                            مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
+                            فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+                            بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+                            و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+                            متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری
+                            را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و
+                            فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می
+                            توان امید داشت که تمام و دشواری موجود در ارائه
+                            راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد
+                            نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
+                            پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                            گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
+                            مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                            کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                            گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را
+                            می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                            طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                            پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                            امید داشت که تمام و دشواری موجود در ارائه راهکارها،
+                            و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته
+                            اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                            گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
+                            مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                            کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                            گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را
+                            می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                            طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                            پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                            امید داشت که تمام و دشواری موجود در ارائه راهکارها،
+                            و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته
+                            اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                            گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
+                            مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                            کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                            گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را
+                            می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                            طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                            پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                            امید داشت که تمام و دشواری موجود در ارائه راهکارها،
+                            و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته
+                            اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                            گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
+                            مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                            کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                            گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را
+                            می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                            طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                            پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                            امید داشت که تمام و دشواری موجود در ارائه راهکارها،
+                            و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته
+                            اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                            گیرد.لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                            از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                            سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
+                            مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                            کاربردی می باشد، کتابهای زیادی در شصت و سه درصد
+                            گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را
+                            می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+                            طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
+                            پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+                            امید داشت که تمام و دشواری موجود در ارائه راهکارها،
+                            و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته
+                            اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                    </div>
+                    <hr class="my-4" />
+                    <div class="flex mb-10 mx-5">
+                        <div class="flex items-center self-start">
+                            <svg class="fill-red-400 cursor-pointer hover:fill-red-500 duration-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                            <span class="inline-block mx-2">32</span>
+                        </div>
+                        <div class="grow direction-rtl">
+                            <span class="block">منابع :</span>
+                            <ul class="mr-10 list-disc">
+                                <li><a class="text-blue-400" href="#" title="لینک منبع">آکسفورد</a></li>
+                                <li><a class="text-blue-400" href="#" title="لینک منبع">IBM</a></li>
+                                <li><a class="text-blue-400" href="#" title="لینک منبع">صنعتی شریف</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <!-- sidebar section -->
+                <aside
+                    class="mx-5 xl:w-4/12 xl:mt-9 xl:order-3 xl:absolute xl:top-0 xl:left-0 xl:border-r xl:pr-2"
+                >
+                    <!-- search box -->
+                    <form
+                        class="flex flex-row-reverse overflow-hidden border rounded-md"
+                        action=""
+                        method="get"
+                    >
+                        <input
+                            class="grow p-4 border-0 caret-slate-400 focus-visible:outline-none direction-rtl"
+                            type="text"
+                            placeholder="جستجو کن ..."
+                        />
+                        <button
+                            class="bg-red-400 hover:bg-red-500 px-10 duration-200"
+                            type="submit"
+                            title="جستجو"
+                        >
+                            <svg
+                                class="fill-white"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                                />
+                            </svg>
+                        </button>
+                    </form>
+                    <!-- latest post section -->
+                    <div class="my-10 direction-rtl">
+                        <h3 class="text-2xl mb-5 mr-4">دوره های اخیر</h3>
+                        <hr />
+                        <!-- lastest post card -->
+                        <div class="flex flex-col lg:flex-row lg:flex-wrap">
+                            <div class="flex m-4">
+                                <img
+                                    class="w-20 h-20 rounded-md"
+                                    src="./images/course_video_01.jpg"
+                                    alt="video"
+                                />
+                                <div class="mx-4">
+                                    <h6 class="text-base mb-2">
+                                        احیای قلبی و ریوی پیشرفته در نوزادان
+                                    </h6>
+                                    <div
+                                        class="flex items-center text-xs text-gray-500 mb-1"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"
+                                            />
+                                        </svg>
+                                        <span class="inline-block mr-2"
+                                            >مسعود رحمانی</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center text-xs text-gray-500"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                            />
+                                            <path
+                                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                                            />
+                                        </svg>
+                                        <span class="inline-block mr-2"
+                                            >43</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex m-4">
+                                <img
+                                    class="w-20 h-20 rounded-md"
+                                    src="./images/course_video_01.jpg"
+                                    alt="video"
+                                />
+                                <div class="mx-4">
+                                    <h6 class="text-base mb-2">
+                                        احیای قلبی و ریوی پیشرفته در نوزادان
+                                    </h6>
+                                    <div
+                                        class="flex items-center text-xs text-gray-500 mb-1"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"
+                                            />
+                                        </svg>
+                                        <span class="inline-block mr-2"
+                                            >مسعود رحمانی</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center text-xs text-gray-500"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                            />
+                                            <path
+                                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                                            />
+                                        </svg>
+                                        <span class="inline-block mr-2"
+                                            >43</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex m-4">
+                                <img
+                                    class="w-20 h-20 rounded-md"
+                                    src="./images/course_video_01.jpg"
+                                    alt="video"
+                                />
+                                <div class="mx-4">
+                                    <h6 class="text-base mb-2">
+                                        احیای قلبی و ریوی پیشرفته در نوزادان
+                                    </h6>
+                                    <div
+                                        class="flex items-center text-xs text-gray-500 mb-1"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"
+                                            />
+                                        </svg>
+                                        <span class="inline-block mr-2"
+                                            >مسعود رحمانی</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center text-xs text-gray-500"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                            />
+                                            <path
+                                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                                            />
+                                        </svg>
+                                        <span class="inline-block mr-2"
+                                            >43</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex m-4">
+                                <img
+                                    class="w-20 h-20 rounded-md"
+                                    src="./images/course_video_01.jpg"
+                                    alt="video"
+                                />
+                                <div class="mx-4">
+                                    <h6 class="text-base mb-2">
+                                        احیای قلبی و ریوی پیشرفته در نوزادان
+                                    </h6>
+                                    <div
+                                        class="flex items-center text-xs text-gray-500 mb-1"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"
+                                            />
+                                        </svg>
+                                        <span class="inline-block mr-2"
+                                            >مسعود رحمانی</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center text-xs text-gray-500"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                            />
+                                            <path
+                                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                                            />
+                                        </svg>
+                                        <span class="inline-block mr-2"
+                                            >43</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex m-4">
+                                <img
+                                    class="w-20 h-20 rounded-md"
+                                    src="./images/course_video_01.jpg"
+                                    alt="video"
+                                />
+                                <div class="mx-4">
+                                    <h6 class="text-base mb-2">
+                                        احیای قلبی و ریوی پیشرفته در نوزادان
+                                    </h6>
+                                    <div
+                                        class="flex items-center text-xs text-gray-500 mb-1"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"
+                                            />
+                                        </svg>
+                                        <span class="inline-block mr-2"
+                                            >مسعود رحمانی</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="flex items-center text-xs text-gray-500"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            fill="currentColor"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                            />
+                                            <path
+                                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                                            />
+                                        </svg>
+                                        <span class="inline-block mr-2"
+                                            >43</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4 xl:hidden" />
+                </aside>
+
+                <!-- comments section -->
+                <div class="relative bg-gray-100 mx-5 mb-5 rounded-lg p-4 xl:w-7/12 xl:order-2 direction-rtl">
+                    <h3 class="text-2xl font-semibold">دیدگاه کاربران</h3>
+                    <!-- send new comment -->
+                    <form class="w-full mt-8 mb-10" method="post" action="#" >
+                        <label class="block mt-4 mb-2 px-4">نظر جدید</label>
+                        <textarea class="w-full resize-none rounded-lg p-4 shadow-[0_0_5px_gray_inset] focus-visible:outline-none" title="نطر کاربر"></textarea>
+                        <button class="border border-blue-400 hover:bg-blue-400 hover:text-white duration-200 py-3 px-10 rounded-lg mt-2 " type="submit" >ثبت نظر</button>
+                    </form>
+
+                    <!-- comments section -->
+                    <section>
+                        <!-- comment -->
+                        <div class="relative border border-stone-300 rounded-lg p-4 mb-4 bg-green-100 overflow-hidden">
+                            <span class="absolute w-1 h-full bg-green-600 right-0 top-0"></span>
+                            <header class="flex items-center border-b border-stone-300 pb-4">
+                                <img class="w-[40px] h-[40px] object-cover rounded-full border border-stone-300 bg-white" src="./images/avatar.jpg" title="عکس پروفایل" alt="عکس پروفایل" />
+                                <span class="block mx-2 text-sm grow">مسعود رحمانی</span>
+                                <span class="text-xs text-gray-500">15 دقیقه قبل</span>
+                            </header>
+                            <p class="my-4 px-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
+                            <!-- like / dislike / answer button -->
+                            <div class="flex flex-row-reverse items-center">
+                                <span class="inline-block p-2 rounded-full bg-gray-50 cursor-pointer border border-stone-300 mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
+                                    </svg>
+                                </span>
+                                <div class="flex p-2 rounded-full bg-gray-50 border border-stone-300 mr-2 text-sm">
+                                    <span>32</span>
+                                    <hr class="inline-block w-px h-[20px] mx-2 bg-gray-300" />
+                                    <span>12</span>
+                                </div>
+                                <span class="inline-block p-2 rounded-full bg-gray-50 cursor-pointer border border-stone-300 mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856 0 .289-.036.586-.113.856-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a9.877 9.877 0 0 1-.443-.05 9.364 9.364 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a8.912 8.912 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.224 2.224 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.866.866 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1"/>
+                                    </svg>
+                                </span>
+                                <span class="inline-block rounded-full py-1 px-2 border border-stone-300 bg-gray-50 text-sm select-none cursor-pointer btn-answer">پاسخ دادن</span>
+                            </div>
+                        </div>
+
+                        <!-- send answer -->
+                        <form class="w-full hidden mt-8 mb-10" method="post" action="#" >
+                            <label class="block mt-4 mb-2 px-4">جواب کاربر</label>
+                            <textarea class="w-full resize-none rounded-lg p-4 shadow-[0_0_5px_gray_inset] focus-visible:outline-none" title="نطر کاربر"></textarea>
+                            <button class="border border-blue-400 hover:bg-blue-400 hover:text-white duration-200 py-3 px-10 rounded-lg mt-2" type="submit" >ثبت نظر</button>
+                        </form>
+
+                        <!-- answers -->
+                        <div class="relative border border-stone-300 rounded-lg p-4 mb-4 mr-10 bg-blue-100 overflow-hidden">
+                            <span class="absolute w-1 h-full bg-blue-600 right-0 top-0"></span>
+                            <header class="flex items-center border-b border-stone-300 pb-4">
+                                <img class="w-[40px] h-[40px] object-cover rounded-full border border-stone-300 bg-white" src="./images/avatar.jpg" title="عکس پروفایل" alt="عکس پروفایل" />
+                                <span class="block mx-2 text-sm grow">مسعود رحمانی</span>
+                                <span class="text-xs text-gray-500">15 دقیقه قبل</span>
+                            </header>
+                            <p class="my-4 px-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
+                            <!-- like / dislike / answer button -->
+                            <div class="flex flex-row-reverse items-center">
+                                <span class="inline-block p-2 rounded-full bg-gray-50 cursor-pointer border border-stone-300 mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
+                                    </svg>
+                                </span>
+                                <div class="flex p-2 rounded-full bg-gray-50 border border-stone-300 mr-2 text-sm">
+                                    <span>32</span>
+                                    <hr class="inline-block w-px h-[20px] mx-2 bg-gray-300" />
+                                    <span>12</span>
+                                </div>
+                                <span class="inline-block p-2 rounded-full bg-gray-50 cursor-pointer border border-stone-300 mr-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8.864 15.674c-.956.24-1.843-.484-1.908-1.42-.072-1.05-.23-2.015-.428-2.59-.125-.36-.479-1.012-1.04-1.638-.557-.624-1.282-1.179-2.131-1.41C2.685 8.432 2 7.85 2 7V3c0-.845.682-1.464 1.448-1.546 1.07-.113 1.564-.415 2.068-.723l.048-.029c.272-.166.578-.349.97-.484C6.931.08 7.395 0 8 0h3.5c.937 0 1.599.478 1.934 1.064.164.287.254.607.254.913 0 .152-.023.312-.077.464.201.262.38.577.488.9.11.33.172.762.004 1.15.069.13.12.268.159.403.077.27.113.567.113.856 0 .289-.036.586-.113.856-.035.12-.08.244-.138.363.394.571.418 1.2.234 1.733-.206.592-.682 1.1-1.2 1.272-.847.283-1.803.276-2.516.211a9.877 9.877 0 0 1-.443-.05 9.364 9.364 0 0 1-.062 4.51c-.138.508-.55.848-1.012.964zM11.5 1H8c-.51 0-.863.068-1.14.163-.281.097-.506.229-.776.393l-.04.025c-.555.338-1.198.73-2.49.868-.333.035-.554.29-.554.55V7c0 .255.226.543.62.65 1.095.3 1.977.997 2.614 1.709.635.71 1.064 1.475 1.238 1.977.243.7.407 1.768.482 2.85.025.362.36.595.667.518l.262-.065c.16-.04.258-.144.288-.255a8.34 8.34 0 0 0-.145-4.726.5.5 0 0 1 .595-.643h.003l.014.004.058.013a8.912 8.912 0 0 0 1.036.157c.663.06 1.457.054 2.11-.163.175-.059.45-.301.57-.651.107-.308.087-.67-.266-1.021L12.793 7l.353-.354c.043-.042.105-.14.154-.315.048-.167.075-.37.075-.581 0-.211-.027-.414-.075-.581-.05-.174-.111-.273-.154-.315l-.353-.354.353-.354c.047-.047.109-.176.005-.488a2.224 2.224 0 0 0-.505-.804l-.353-.354.353-.354c.006-.005.041-.05.041-.17a.866.866 0 0 0-.121-.415C12.4 1.272 12.063 1 11.5 1"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>                        
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <footer class="bg-cyan-600 pt-10 text-white direction-rtl">
+            <div class="container mx-auto px-6 flex flex-col lg:flex-row">
+                <!-- about us part -->
+                <div class="w-1/2 mx-auto flex flex-col items-center my-10">
+                    <a class="flex justify-end items-center mb-8" href="#">
+                        <img
+                            class="w-[50px] rounded-full"
+                            src="./images/logo.jpg"
+                            alt="logo"
+                        />
+                        <h1 class="text-3xl text-red-500 mr-4">E.M.S</h1>
+                    </a>
+                    <p class="text-justify">
+                        این سایت توسط یکی از همکاران در جهت ارائه مطالب آموزشی و
+                        دوره های آموزشی برای شاخه های پیراپزشکی تهیه شده تا
+                        مروری باشد بر مطالب تدریس شده در طول دوران دانشجویی و
+                        همچنین بخش فروشگاهی جهت ارائه ی کتابهای تخصصی هر رشته
+                        تهیه شده امیداوارم که مورد رضایت همه کسانی که استفاده می
+                        کنند قرار گیرد
+                    </p>
+                </div>
+                <!-- site map part -->
+                <div class="w-1/2 mx-auto flex flex-col text-center my-10">
+                    <h3 class="text-3xl mb-4">نقشه سایت</h3>
+                    <ul>
+                        <li>
+                            <a
+                                class="inline-block py-3 px-10 hover:bg-gray-200 hover:text-black rounded"
+                                href="#"
+                                >دوره ها</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="inline-block py-3 px-10 hover:bg-gray-200 hover:text-black rounded"
+                                href="#"
+                                >مقالات</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="inline-block py-3 px-10 hover:bg-gray-200 hover:text-black rounded"
+                                href="#"
+                                >درباره ما</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="inline-block py-3 px-10 hover:bg-gray-200 hover:text-black rounded"
+                                href="#"
+                                >تماس با ما</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <!-- contact us part -->
+                <div class="w-1/2 mx-auto flex flex-col text-center my-10">
+                    <h3 class="text-3xl mb-4">خبرنامه</h3>
+                    <p>
+                        امیدوارم که مطالب این سایت مفید بوده باشه و اگر نظری یا
+                        پیشنهادی در مورد سایت یا مطالب آن دارید می توانید در
+                        قسمت تماس با ما برای ما ارسال کنید تا باعث رشد بهتر سایت
+                        شود
+                    </p>
+                    <h3 class="my-4 text-2xl">ما را دنبال کنید در ...</h3>
+                    <div class="flex justify-between items-center mx-auto">
+                        <!-- whats app icon -->
+                        <a href="#" title="whats app">
+                            <svg
+                                class="w-8 h-8 mx-4 hover:scale-125 duration-200"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                                />
+                            </svg>
+                        </a>
+                        <!-- telegram icon -->
+                        <a href="#" title="telegram">
+                            <svg
+                                class="w-8 h-8 mx-4 hover:scale-125 duration-200"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
+                                />
+                            </svg>
+                        </a>
+                        <!-- instagram -->
+                        <a href="#" title="instagram">
+                            <svg
+                                class="w-8 h-8 mx-4 hover:scale-125 duration-200"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                                />
+                            </svg>
+                        </a>
+                        <!-- linkedin icon -->
+                        <a href="#" title="linkedin">
+                            <svg
+                                class="w-8 h-8 mx-4 hover:scale-125 duration-200"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- designeres part -->
+            <div class="bg-blue-400 text-white py-4">
+                <p class="text-center text-gray-600 direction-rtl">
+                    این سایت توسط
+                    <span class="inline-block mx-2 text-white">حسن سجادی</span>
+                    و
+                    <span class="inline-block mx-2 text-white"
+                        >مسعود رحمانی</span
+                    >
+                    طراحی و تنظیم شده است.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

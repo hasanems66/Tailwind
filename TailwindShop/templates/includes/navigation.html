@@ -1,0 +1,286 @@
+{% load static %}
+
+
+<nav class="bg-cyan-400">
+    <div
+            class="container mx-auto py-1 flex items-center flex-row-reverse"
+    >
+        <!-- hamberger menu part -->
+        <div
+                class="hamberger-menu w-[30px] mr-4 cursor-pointer md:hidden"
+        >
+                    <span
+                            class="hamberger-item block w-full bg-gray-600 rounded h-[3px] my-1.5 duration-200"
+                    ></span>
+            <span
+                    class="hamberger-item block w-full bg-gray-600 rounded h-[3px] my-1.5 duration-200"
+            ></span>
+            <span
+                    class="hamberger-item block w-full bg-gray-600 rounded h-[3px] my-1.5 duration-200"
+            ></span>
+        </div>
+        <!-- logo and brand part -->
+        <div class="grow md:grow-0 md:w-[250px]">
+            <a
+                    class="flex flex-row-reverse justify-center items-center"
+                    href="#"
+            >
+                <img
+                        class="w-[50px] rounded-full"
+                        src="{% static './images/logo.jpg' %}"
+                        alt="logo"
+                />
+                <h1 class="text-2xl text-red-500 mr-4">E.M.S</h1>
+            </a>
+        </div>
+        <!-- navigation links part -->
+        <div
+                class="absolute top-0 z-[1000] bg-white w-full left-full duration-200 md:relative md:left-0 md:bg-transparent navigation"
+        >
+            <!-- nav bar close icon -->
+            <svg
+                    class="absolute right-0 m-4 p-2 w-[40px] h-[40px] bg-red-200 hover:bg-red-300 rounded-full cursor-pointer duration-200 dropdown-closer md:hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+            >
+                <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                />
+            </svg>
+            <!-- navbar links -->
+            <ul
+                    class="flex flex-col mt-[80px] md:mt-0 md:justify-center md:items-center md:flex-row-reverse"
+            >
+                <li>
+                    <a
+                            class="block text-center hover:bg-gray-100 py-4 px-5 md:hover:bg-transparent md:hover:text-white duration-200"
+                            href="#"
+                    >خانه</a
+                    >
+                </li>
+                <li>
+                    <a
+                            class="block text-center hover:bg-gray-100 py-4 px-5 md:hover:bg-transparent md:hover:text-white duration-200"
+                            href="#"
+                    >دوره ها</a
+                    >
+                </li>
+                <li>
+                    <a
+                            class="block text-center hover:bg-gray-100 py-4 px-5 md:hover:bg-transparent md:hover:text-white duration-200"
+                            href="#"
+                    >مقالات</a
+                    >
+                </li>
+                <li class="dropdown-container md:relative">
+                    <!-- large screen as a link -->
+                    <a
+                            class="hidden md:block text-center hover:bg-gray-100 py-4 px-5 cursor-pointer md:hover:bg-transparent md:hover:text-white dropdown-tab"
+                            href="#"
+                    >
+                        <svg
+                                class="inline duration-200 md:rotate-0 arrow-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                            />
+                        </svg>
+                        <span class="duration-200"> فروشگاه </span>
+                    </a>
+
+                    <!-- small screen as normal element -->
+                    <div
+                            class="block md:hidden text-center hover:bg-gray-100 py-4 px-5 cursor-pointer md:hover:bg-transparent md:hover:text-white dropdown-tab"
+                    >
+                        <svg
+                                class="inline duration-200 md:rotate-0 arrow-icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                            />
+                        </svg>
+                        <span class="duration-200"> فروشگاه </span>
+                    </div>
+                    <div
+                            class="h-0 bg-gray-200 overflow-hidden duration-200 dropdown-menu md:absolute md:right-0 md:hidden md:bg-white md:w-[200px] md:h-[256px] md:py-2 md:border md:border-gray-300 md:rounded-lg"
+                    >
+                        <!-- dropdown items -->
+                        <ul class="flex flex-col">
+                            <li>
+                                <a
+                                        class="block py-3 hover:bg-gray-100 text-center"
+                                        href="#"
+                                >پرستاری</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                        class="block py-3 hover:bg-gray-100 text-center"
+                                        href="#"
+                                >فوریت پزشکی</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                        class="block py-3 hover:bg-gray-100 text-center"
+                                        href="#"
+                                >اتاق عمل</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                        class="block py-3 hover:bg-gray-100 text-center"
+                                        href="#"
+                                >هوشبری</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                        class="block py-3 hover:bg-gray-100 text-center"
+                                        href="#"
+                                >مامایی</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a
+                            class="block text-center hover:bg-gray-100 py-4 px-5 duration-200 md:hidden md:hover:bg-transparent md:hover:text-white lg:block"
+                            href="#"
+                    >درباره ما</a
+                    >
+                </li>
+                <li>
+                    <a
+                            class="block text-center hover:bg-gray-100 py-4 px-5 duration-200 md:hidden md:hover:bg-transparent md:hover:text-white lg:block"
+                            href="{% url 'account:otp_login' %}"
+                    >تماس با ما</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center ml-4">
+            <!-- loggined profile part -->
+
+            <div class="relative z-50 avatar-wrapper">
+                {% if request.user.is_authenticated %}
+                    <div class="flex items-center">
+                        <div>
+                            <img
+                                    class="w-[45px] min-w-[45px] h-[45px] rounded-full objecte-cover"
+                                    src="{% static './images/avatar.jpg' %}"
+                                    alt="avatar image"
+                            />
+                        </div>
+
+                        <!-- show full username for large screen -->
+                        {% if request.user.fullname %}
+                            <span
+                                    class="hidden md:block ml-2 text-sm px-2 w-[150px] max-w-[200px]"
+                            >{{ request.user.fullname }}</span
+                            >
+                        {% else %}
+                            <span
+                                    class="hidden md:block ml-2 text-sm px-2 w-[150px] max-w-[200px]"
+                            >{{ request.user.phone }}</span
+                            >
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <div>
+                        <img
+                                class="w-[45px] min-w-[45px] h-[45px] rounded-full objecte-cover"
+                                src="{% static './images/avatar.jpg' %}"
+                                alt="avatar image"
+                        />
+                    </div>
+                {% endif %}
+                <div
+                        class="hidden absolute border bg-white w-[200px] overflow-hidden rounded-lg avatar-option z-[200]"
+                >
+                    <ul>
+                        {% if request.user.fullname %}
+                            <li>
+                                <!-- show full username for small screen -->
+                                <span
+                                        class="block md:hidden px-4 py-2 text-right border-b"
+                                >{{ request.user.fullname }}</span
+                                >
+                            </li>
+                        {% else %}
+                            <li>
+                                <!-- show full username for small screen -->
+                                <span
+                                        class="block md:hidden px-4 py-2 text-right border-b"
+                                >{{ request.user.phone }}</span
+                                >
+                            </li>
+                        {% endif %}
+
+                        <li>
+                            <a
+                                    class="block hover:bg-gray-100 px-4 py-2 text-right"
+                                    href="#"
+                                    title="ویرایش اطلاعات"
+                            >
+                                ویرایش اطلاعات
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                    class="flex flex-row-reverse items-center hover:bg-gray-100 px-4 py-2 text-right"
+                                    href="#"
+                                    title="سبد خرید"
+                            >
+                                <span class="grow">سبد خرید</span>
+                                <span
+                                        class="bg-red-400 text-white text-sm py-1 px-2 rounded-full"
+                                >2</span
+                                >
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                    class="block hover:bg-red-100 text-red-400 px-4 py-2 text-right"
+                                    href="{% url 'account:user_logout' %}"
+                                    title="خروج"
+                            >خروج</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- login/register button -->
+            <!-- for small screen -->
+
+            <!-- <a class="md:hidden" href="#" title="user login">
+                <svg class="w-[35px] h-[35px] hover:fill-[#fff] duration-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z"/>
+                    <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                </svg>
+            </a> -->
+
+            <!-- for large screen -->
+
+            <!-- <a
+                class="md:block w-[150px] py-3 px-6 border border rounded-full hover:bg-white hover:border-white duration-200 border-gray-600 hidden"
+                href="#"
+                title="user login" >
+                ورود / ثبت نام</a>  -->
+        </div>
+    </div>
+</nav>

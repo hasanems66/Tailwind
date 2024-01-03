@@ -4,10 +4,10 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .forms import UserCreationForm, UserChangeForm
 from account.models import User
 from . import models
-from django_jalali.admin.filters import JDateFieldListFilter
+
 
 # you need import this for adding jalali calander widget
-import django_jalali.admin as jadmin
+
 
 
 

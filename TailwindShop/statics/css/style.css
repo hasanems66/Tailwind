@@ -1,0 +1,77 @@
+@font-face {
+    font-family: Vazir;
+    src: url(../fonts/Vazir.ttf);
+}
+
+* {
+    font-family: Vazir;
+}
+
+/* my classes start */
+
+.direction-rtl {
+    direction: rtl;
+}
+
+.direction-ltr {
+    direction: ltr;
+}
+
+/* my classes end */
+
+/* nav start */
+
+
+.hamberger-menu:hover .hamberger-item:nth-child(1),
+.hamberger-menu:hover .hamberger-item:nth-child(3) {
+    width: 50%;
+}
+
+.dropdown-container:hover .dropdown-menu {
+    display: block;
+}
+
+.avatar-wrapper:hover .avatar-option {
+    display: block;
+}
+
+/* nav end */
+
+/* slidebar-1 start */
+
+.item {
+    left: 120%;
+}
+
+.active {
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 500ms linear;
+}
+
+.left {
+    left: -120%;
+    transition: all 500ms linear;
+}
+
+/* slidebar-1 end */
+
+
+/* slidebar-2 start */
+
+.slidebar-2__items {
+    left: 120%;
+}
+
+.active {
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 500ms linear;
+}
+
+.left {
+    left: -120%;
+    transition: all 500ms linear;
+}
+
+/* slidebar-2 end */
